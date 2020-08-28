@@ -1,1 +1,1 @@
-https://bbshop.azurewebsites.net
+https://bbshop2.azurewebsites.net
