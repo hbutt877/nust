@@ -1,0 +1,39 @@
+SELECT *, 
+ MATCH(apparels.brand,apparels.type,apparels.gender,apparels.piece,apparels.fabric,apparels.product) AGAINST('heels women shoes') as apscore,
+ MATCH(apparelssize.size) AGAINST('40') as sizescore,
+ MATCH(apparelscolour.colour) AGAINST('black') as colourscore
+FROM apparels 
+LEFT JOIN apparelssize ON apparels.id = apparelssize.id 
+LEFT JOIN apparelscolour ON apparels.id = apparelscolour.id 
+WHERE 
+ MATCH(apparels.brand,apparels.type,apparels.gender,apparels.piece,apparels.fabric,apparels.product) AGAINST('heels women shoes')
+ OR MATCH(apparelssize.size) AGAINST('40')
+ OR MATCH(apparelscolour.colour) AGAINST('black')
+ORDER BY (apscore + sizescore + colourscore) desc limit 20;
+
+
+
+
+
+alter table apparelscolour add constraint fk_colour foreign key(id) references apparels(id) on delete cascade;
+// do this for all tables
+
+
+create table apparelscolour(prim_id int auto_increment not null primary key, colour varchar(30), id int);
+create table apparelsimage(prim_id int auto_increment not null primary key, image varchar(255), id int);
+create table apparelssize(prim_id int auto_increment not null primary key, size varchar(30), id int);
+create table apparels(id int primary key, brand varchar(20), link text, price int, sku text, type varchar(20), gender varchar(10), piece varchar(20), fabric varchar(20),description text, product varchar(30));
+
+
+alter table apparels add FULLTEXT search_index(brand,type,gender,piece,fabric,product);
+alter table apparelssize add FULLTEXT search_index_size(size);
+alter table apparelscolour add FULLTEXT search_index_colour(colour);
+
+
+create table typeimage(type varchar(50),product varchar(50),gender varchar(10),image text)
+insert into typeimage(type,product,gender) select distinct apparels.type,apparels.product,apparels.gender from apparels where apparels.type not in (select a.type from typeimage a);
+update typeimage set image="ENTER URL HERE" where type="ENTER TYPE HERE";
+
+create table brandimage(brand varchar(50),gender varchar(10),image text);
+insert into brandimage(brand,gender) select distinct apparels.brand,apparels.gender from apparels where apparels.brand not in (select a.brand from brandimage a);
+update brandimage set image="ENTER URL HERE" where brand="ENTER TYPE HERE";
