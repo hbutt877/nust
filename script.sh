@@ -10,3 +10,5 @@ wget https://chromedriver.storage.googleapis.com/94.0.4606.61/chromedriver_linux
 unzip chromedriver_linux64.zip
 wget -O t.py https://raw.githubusercontent.com/hbutt877/nust/master/t.py
 wget -O job_t.sh https://raw.githubusercontent.com/hbutt877/nust/master/job_t.sh
+rm chromedriver_linux64.zip
+rm google-chrome-stable_current_amd64.deb
