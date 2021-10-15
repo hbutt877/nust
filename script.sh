@@ -9,4 +9,4 @@ sudo apt install -y ./google-chrome-stable_current_amd64.deb
 wget https://chromedriver.storage.googleapis.com/94.0.4606.61/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
 wget -O t.py https://raw.githubusercontent.com/hbutt877/nust/master/t.py
-wget -O job_t.sh 
+wget -O job_t.sh https://raw.githubusercontent.com/hbutt877/nust/master/job_t.sh
