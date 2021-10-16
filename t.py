@@ -58,7 +58,6 @@ def main():
             sleep(random.randint(2, 5))
             search.send_keys('\n')
             print(3)
-            driver.save_screenshot('erer.png')
             driver.execute_script(f'window.scrollBy(0,2000);')
             sleep(random.randint(3, 5))
             if driver.find_elements_by_xpath('//button[contains(text(),"Good")]'):
@@ -72,9 +71,11 @@ def main():
             driver.execute_script(f'window.scrollBy(0,{random.randint(0,3000)});')
             sleep(random.randint(1, 4))
         print('SEARCH DONE ')
+        driver.save_screenshot('done.png')
+
     except Exception as e:
         print('errorrrrr', e)
-        driver.save_screenshot('erer.png')
+        driver.save_screenshot('eroooooors.png')
     finally:
         try:
             driver.delete_all_cookies()
@@ -91,10 +92,10 @@ def main():
 if __name__=='__main__':
 #    main()
 #    exit()
-    #start_time = time()
+    start_time = time()
     with ThreadPoolExecutor(max_workers=50) as ex:
         for i in range(50):
             ex.submit(main)
-    #end_time = time()
-    #elapsed_time = end_time - start_time
-    #print(f"Elapsed run time: {elapsed_time} seconds")
+    end_time = time()
+    elapsed_time = end_time - start_time
+    print(f"Elapsed run time: {elapsed_time} seconds")
