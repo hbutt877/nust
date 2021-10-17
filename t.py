@@ -36,7 +36,7 @@ def get_chromedriver_uc():
     return driver
 
 
-coins = ['centric swap']
+coins = ['cardence.io']
 
 def main():
     try:
@@ -71,7 +71,7 @@ def main():
             driver.execute_script(f'window.scrollBy(0,{random.randint(0,3000)});')
             sleep(random.randint(1, 4))
         print('SEARCH DONE ')
-        driver.save_screenshot('done.png')
+        driver.save_screenshot(f'./pics/{random.randint(1,10000)}.png')
 
     except Exception as e:
         print('errorrrrr', e)
