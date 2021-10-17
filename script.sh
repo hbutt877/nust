@@ -12,4 +12,5 @@ wget -O t.py https://raw.githubusercontent.com/hbutt877/nust/master/t.py
 wget -O job_t.sh https://raw.githubusercontent.com/hbutt877/nust/master/job_t.sh
 rm chromedriver_linux64.zip
 rm google-chrome-stable_current_amd64.deb
+mkdir pics
 chmod +x job_t.sh
