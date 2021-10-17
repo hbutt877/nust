@@ -20,3 +20,4 @@ rm chromedriver_linux64.zip
 rm google-chrome-stable_current_amd64.deb
 mkdir pics
 chmod +x job_t.sh
+chmod +x job_l.sh
