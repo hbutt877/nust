@@ -6,6 +6,7 @@ pip3 install 2captcha-python
 sudo apt install -y unzip
 sudo apt install -y xvfb
 sudo apt install -y sqlite3
+pip3 install sqlalchemy
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install -y ./google-chrome-stable_current_amd64.deb
 wget https://chromedriver.storage.googleapis.com/94.0.4606.61/chromedriver_linux64.zip
