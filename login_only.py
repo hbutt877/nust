@@ -24,9 +24,9 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     email = Column(String, unique=True)
     password = Column(String)
-    orakuru = Column(Boolean)
-    waultswap = Column(Boolean)
-    centric_swap = Column(Boolean)
+    #orakuru = Column(Boolean)
+    #waultswap = Column(Boolean)
+    #centric_swap = Column(Boolean)
     def __repr__(self):
         return f'User {self.email}'
 
@@ -157,13 +157,13 @@ def main(email):
                         print('GOOD NOT DONE ' + email)
 #                        driver.save_screenshot('good.png')
 
-                    if coins[i] == 'centric swap':
-                        user.centric_swap = True
+#                    if coins[i] == 'centric swap':
+#                        user.centric_swap = True
 #                    elif coins[i] == 'orakuru':
 #                        user.orakuru = True
-                    else:
-                        print('WRONG COIN STOPPPPPPPP')
-                    session.commit()
+#                    else:
+#                        print('WRONG COIN STOPPPPPPPP')
+#                    session.commit()
                     i += 1
                     driver.get('https://coinmarketcap.com/')
                 except Exception as e:
