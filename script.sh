@@ -14,6 +14,7 @@ unzip chromedriver_linux64.zip
 wget -O t.py https://raw.githubusercontent.com/hbutt877/nust/master/t.py
 wget -O job_t.sh https://raw.githubusercontent.com/hbutt877/nust/master/job_t.sh
 wget -O login.py https://raw.githubusercontent.com/hbutt877/nust/master/login.py
+wget -O login_only.py https://raw.githubusercontent.com/hbutt877/nust/master/login_only.py
 wget -O signup.py https://raw.githubusercontent.com/hbutt877/nust/master/signup.py
 wget -O job_l.sh https://raw.githubusercontent.com/hbutt877/nust/master/job_l.sh
 wget -O captcha.py https://raw.githubusercontent.com/hbutt877/nust/master/captcha.py
