@@ -16,9 +16,8 @@ wget -O job_t.sh https://raw.githubusercontent.com/hbutt877/nust/master/job_t.sh
 wget -O login.py https://raw.githubusercontent.com/hbutt877/nust/master/login.py
 wget -O signup.py https://raw.githubusercontent.com/hbutt877/nust/master/signup.py
 wget -O job_l.sh https://raw.githubusercontent.com/hbutt877/nust/master/job_l.sh
-wget -O job_l.sh https://raw.githubusercontent.com/hbutt877/nust/master/job_s.sh
 wget -O captcha.py https://raw.githubusercontent.com/hbutt877/nust/master/captcha.py
-wget -O job_l.sh https://raw.githubusercontent.com/hbutt877/nust/master/job_s.sh
+wget -O job_s.sh https://raw.githubusercontent.com/hbutt877/nust/master/job_s.sh
 wget -O obaid_proxy.zip https://github.com/hbutt877/nust/raw/master/obaid_proxy.zip
 wget -O nick_proxy.zip https://github.com/hbutt877/nust/raw/master/nick_proxy.zip
 rm chromedriver_linux64.zip
