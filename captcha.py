@@ -1,7 +1,11 @@
 from twocaptcha import TwoCaptcha
 
+
+#nick
 api_key = '4257cd460f13b1ccad5b64138f58ece7'
 
+#obaid
+#api_key = '40a16a7e975040ccd5ec00f24c0ccd1f'
 
 def solve():
     solver = TwoCaptcha(api_key)
