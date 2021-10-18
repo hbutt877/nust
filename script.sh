@@ -20,7 +20,7 @@ wget -O job_l.sh https://raw.githubusercontent.com/hbutt877/nust/master/job_s.sh
 wget -O captcha.py https://raw.githubusercontent.com/hbutt877/nust/master/captcha.py
 wget -O job_l.sh https://raw.githubusercontent.com/hbutt877/nust/master/job_s.sh
 wget -O obaid_proxy.zip https://github.com/hbutt877/nust/raw/master/obaid_proxy.zip
-wget -O proxy_auth_plugin.zip https://github.com/hbutt877/nust/raw/master/proxy_auth_plugin.zip
+wget -O nick_proxy.zip https://github.com/hbutt877/nust/raw/master/nick_proxy.zip
 rm chromedriver_linux64.zip
 rm google-chrome-stable_current_amd64.deb
 mkdir pics
