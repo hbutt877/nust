@@ -53,6 +53,9 @@ def get_chromedriver():
     chrome_options = webdriver.ChromeOptions()
     # chrome_options.add_argument(f'--proxy-server={PROXY}')
     chrome_options.add_extension('proxy_auth_plugin.zip')
+    #chrome_options.add_extension('obaid_proxy.zip')
+    
+    
     # chrome_options.add_extension('proxyrack.zip')
     #chrome_options.add_extension('./ext.crx')
     #chrome_options.add_argument('--no-sandbox')
