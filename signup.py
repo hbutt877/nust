@@ -161,7 +161,7 @@ def main():
             print('email opened')
         else:
             print('error in verify email')
-            driver.save_screenshot(f'ee{random.randint(5,20)}.png')
+            #driver.save_screenshot(f'ee{random.randint(5,20)}.png')
             return
         sleep(2)
         while 1:
@@ -182,7 +182,7 @@ def main():
 
     except Exception as e:
         print(e)
-        driver.save_screenshot(f'{random.randint(5,20)}.png')
+        #driver.save_screenshot(f'{random.randint(5,20)}.png')
     finally:
         if server:
             display.stop()
