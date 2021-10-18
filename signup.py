@@ -51,6 +51,8 @@ def get_chromedriver():
     # driver = uc.Chrome()
     #chrome_options = uc.ChromeOptions()
     chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
     # chrome_options.add_argument(f'--proxy-server={PROXY}')
     chrome_options.add_extension('nick_proxy.zip')
     #chrome_options.add_extension('obaid_proxy.zip')
