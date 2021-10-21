@@ -13,7 +13,7 @@ from captcha import solve
 
 
 
-engine = create_engine('sqlite:///accounts3.db', connect_args={'check_same_thread': False})
+engine = create_engine('sqlite:///allaccounts.db', connect_args={'check_same_thread': False})
 
 Base = declarative_base()
 
