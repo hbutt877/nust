@@ -127,7 +127,8 @@ def main(email):
                     user = session.query(User).filter_by(email=email).first()
                     search_button = WebDriverWait(driver, 5).until(
                         EC.presence_of_element_located((By.XPATH, '//div[text()="Search"]')))
-                    search_button.click()
+                    driver.execute_script("arguments[0].click();", search_button)
+#                    search_button.click()
                     sleep(random.randint(1, 3))
                     search = WebDriverWait(driver, 5).until(
                         EC.presence_of_element_located((By.XPATH, '//input[@spellcheck="false"]')))
