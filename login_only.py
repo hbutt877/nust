@@ -100,7 +100,7 @@ def main(email):
 
         _ = 0
         while 1:
-            driver.execute_script(f'___grecaptcha_cfg.clients[0].l.l.callback("{code}")')
+            driver.execute_script(f'___grecaptcha_cfg.clients[0].B.B.callback("{code}")')
             sleep(3)
             avatar = driver.find_elements_by_xpath('//div[@class="avatar-img "]')
             if avatar:
