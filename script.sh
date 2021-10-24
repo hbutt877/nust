@@ -18,6 +18,7 @@ wget -O login_only.py https://raw.githubusercontent.com/hbutt877/nust/master/log
 wget -O signup.py https://raw.githubusercontent.com/hbutt877/nust/master/signup.py
 wget -O job_l.sh https://raw.githubusercontent.com/hbutt877/nust/master/job_l.sh
 wget -O captcha.py https://raw.githubusercontent.com/hbutt877/nust/master/captcha.py
+wget -O fv4.py https://raw.githubusercontent.com/hbutt877/nust/master/fv4.py
 wget -O job_s.sh https://raw.githubusercontent.com/hbutt877/nust/master/job_s.sh
 wget -O obaid_proxy.zip https://github.com/hbutt877/nust/raw/master/obaid_proxy.zip
 wget -O nick_proxy.zip https://github.com/hbutt877/nust/raw/master/nick_proxy.zip
