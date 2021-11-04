@@ -24,8 +24,6 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     email = Column(String, unique=True)
     password = Column(String)
-    orakuru = Column(Boolean)
-    waultswap = Column(Boolean)
     centric_swap = Column(Boolean)
     def __repr__(self):
         return f'User {self.email}'
@@ -166,7 +164,7 @@ def main(email):
                         print('WRONG COIN STOPPPPPPPP')
                     session.commit()
                     i += 1
-                    driver.get('https://coinmarketcap.com/')
+#                    driver.get('https://coinmarketcap.com/')
                 except Exception as e:
                     print('error occured ', e)
                     errors += 1
@@ -188,6 +186,6 @@ if __name__ == '__main__':
 #    main(u[0].email)
 #    exit()
     random.shuffle(u)
-    with ThreadPoolExecutor(max_workers=20) as ex:
-        for i in u[:20]:
+    with ThreadPoolExecutor(max_workers=50) as ex:
+        for i in u[:50]:
             ex.submit(main, i.email)
