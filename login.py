@@ -126,7 +126,6 @@ def main(email):
                     search_button = WebDriverWait(driver, 5).until(
                         EC.presence_of_element_located((By.XPATH, '//div[text()="Search"]')))
                     driver.execute_script("arguments[0].click();", search_button)
-#                    search_button.click()
                     sleep(random.randint(1, 3))
                     search = WebDriverWait(driver, 5).until(
                         EC.presence_of_element_located((By.XPATH, '//input[@spellcheck="false"]')))
@@ -158,11 +157,23 @@ def main(email):
 
                     if coins[i] == 'centric swap':
                         user.centric_swap = True
-#                    elif coins[i] == 'orakuru':
-#                        user.orakuru = True
                     else:
                         print('WRONG COIN STOPPPPPPPP')
                     session.commit()
+                    repeater = False
+                    if repeater:
+                        for j in range(10):
+                            search_button = WebDriverWait(driver, 5).until(
+                                EC.presence_of_element_located((By.XPATH, '//div[text()="Search"]')))
+                            driver.execute_script("arguments[0].click();", search_button)
+                            sleep(random.randint(1, 3))
+                            search = WebDriverWait(driver, 5).until(
+                                EC.presence_of_element_located((By.XPATH, '//input[@spellcheck="false"]')))
+                            search.send_keys(coins[i])
+                            sleep(random.randint(2, 4))
+                            search.send_keys('\n')
+                            sleep(random.randint(3, 4))
+                            driver.get('https://coinmarketcap.com/')
                     i += 1
 #                    driver.get('https://coinmarketcap.com/')
                 except Exception as e:
