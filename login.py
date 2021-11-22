@@ -24,7 +24,7 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     email = Column(String, unique=True)
     password = Column(String)
-    centric_swap = Column(Boolean)
+    coin = Column(Boolean)
     def __repr__(self):
         return f'User {self.email}'
 
@@ -42,7 +42,7 @@ if server:
 # PROXY = '209.205.212.35:444'
 
 
-coins = ['centric swap']
+coins = ['french connection finance']
 
 def get_chromedriver():
     # driver = uc.Chrome()
@@ -57,8 +57,9 @@ def get_chromedriver():
 
 
     # chrome_options.add_argument(f'--proxy-server={PROXY}')
-    chrome_options.add_extension('nick_proxy.zip')
+    # chrome_options.add_extension('nick_proxy.zip')
     # chrome_options.add_extension('obaid_proxy.zip')
+    chrome_options.add_extension('dinesh.zip')
     # chrome_options.add_extension('./ext.crx')
     # chrome_prefs = {}
     # chrome_options.experimental_options["prefs"] = chrome_prefs
@@ -155,8 +156,8 @@ def main(email):
                         print('GOOD NOT DONE ' + email)
 #                        driver.save_screenshot('good.png')
 
-                    if coins[i] == 'centric swap':
-                        user.centric_swap = True
+                    if coins[i] == 'french connection finance':
+                        user.coin = True
                     else:
                         print('WRONG COIN STOPPPPPPPP')
                     session.commit()
@@ -193,10 +194,10 @@ def main(email):
             pass
 
 if __name__ == '__main__':
-    u = session.query(User).filter_by(centric_swap=None).all()
+    u = session.query(User).filter_by(coin=None).all()
 #    main(u[0].email)
 #    exit()
     random.shuffle(u)
     with ThreadPoolExecutor(max_workers=50) as ex:
-        for i in u[:50]:
+        for i in u[:30]:
             ex.submit(main, i.email)
